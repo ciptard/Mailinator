@@ -1,6 +1,6 @@
 <?php namespace Brnlbs\Mailinator;
 
-use GuzzleHttp\Client as GuzzleClient;
+use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\RequestException;
 
 /**
@@ -21,12 +21,12 @@ class Client
     private $userAgent = 'Mailinator/1.0.0';
 
     /**
-     * @var
+     * @var HttpClient
      */
-    private $client;
+    private $httpClient;
 
     /**
-     * @var
+     * @var string
      */
     protected $apiKey;
 
@@ -36,7 +36,7 @@ class Client
     public function __construct($apiKey)
     {
         $this->apiKey = $apiKey;
-        $this->httpClient = new GuzzleClient([
+        $this->httpClient = new HttpClient([
             'base_url' => $this->baseUrl,
             'defaults' => [
                 'headers' => ['User-Agent' => $this->userAgent],
