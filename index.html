@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mailinator by brnlbs</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Mailinator</h1>
+        <p>A PHP library that wraps around the Mailinator API</p>
+
+        <p class="view"><a href="https://github.com/brnlbs/Mailinator">View the Project on GitHub <small>brnlbs/Mailinator</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/brnlbs/Mailinator/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/brnlbs/Mailinator/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/brnlbs/Mailinator">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="mailinator" class="anchor" href="#mailinator"><span class="octicon octicon-link"></span></a>Mailinator</h1>
+
+<p><a href="https://github.com/brnlbs/mailinator/tags"><img src="http://img.shields.io/packagist/dt/brnlbs/mailinator.svg?style=flat-square" alt="Total Downloads"></a>
+<a href="https://github.com/brnlbs/mailinator/releases"><img src="https://img.shields.io/github/release/brnlbs/mailinator.svg?style=flat-square" alt="Latest Version"></a>
+<a href="https://github.com/brnlbs/mailinator/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></a></p>
+
+<p>A simple PHP library that wraps around the <a href="http://mailinator.com/apidocs.jsp">Mailinator API</a> for use in PHP projects.</p>
+
+<h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<p><a href="https://php.net">PHP</a> 5.4+ or <a href="http://hhvm.com">HHVM</a> 3.2+, and <a href="https://getcomposer.org">Composer</a> are required.</p>
+
+<p>To get the latest version, simply require <code>"brnlbs/mailinator": "~1.0"</code> in your <code>composer.json</code> file. You'll then need to run <code>composer install</code> or <code>composer update</code> to download it and have the autoloader updated.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-php"><pre><span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Brnlbs\Mailinator\Client</span><span class="p">(</span><span class="s1">'api_key'</span><span class="p">);</span>
+
+<span class="k">try</span>
+<span class="p">{</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">publicInbox</span><span class="p">(</span><span class="s1">'mail@to.com'</span><span class="p">);</span>
+    <span class="k">echo</span><span class="p">(</span><span class="s1">'&lt;pre&gt;'</span> <span class="o">.</span> <span class="nb">print_r</span><span class="p">(</span><span class="nv">$response</span><span class="p">,</span> <span class="k">true</span><span class="p">)</span> <span class="o">.</span> <span class="s1">'&lt;/pre&gt;'</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="nx">Brnlbs\Spacejam\Exception</span> <span class="nv">$e</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nb">printf</span><span class="p">(</span><span class="s1">'%d: %s'</span><span class="p">,</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getCode</span><span class="p">(),</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2>
+<a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h2>
+
+<ul>
+<li><a href="https://github.com/brnlbs">Brian O'Sullivan</a></li>
+<li><a href="https://github.com/brnlbs/mailinator/contributors">All Contributors</a></li>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>The MIT License (MIT). Please see <a href="https://github.com/brnlbs/mailinator/blob/master/LICENSE">License File</a> for more information.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/brnlbs">brnlbs</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
