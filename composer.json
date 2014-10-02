@@ -1,0 +1,25 @@
+{
+    "name": "brnlbs/mailinator",
+    "description": "A PHP library that wraps around the Mailinator API",
+    "keywords": [
+        "mailinator",
+        "package"
+    ],
+    "homepage": "https://github.com/brnlbs/mailinator",
+    "license": "MIT",
+    "authors": [{
+        "name": "Brian O'Sullivan",
+        "email": "dev@brnlbs.me",
+        "homepage": "http://brnlbs.me/",
+        "role": "Developer"
+    }],
+    "require": {
+        "php": ">=5.4.0",
+        "guzzlehttp/guzzle": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Brnlbs\\Mailinator\\": "src/"
+        }
+    }
+}
